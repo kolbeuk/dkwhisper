@@ -1,4 +1,4 @@
-# whisper
+# dkwhisper
 Multilingual Whisper-Llama2 Integration for Speech Recognition and Translation
 Introduction
 This Python script is an innovative tool that combines the powerful capabilities of OpenAI's Whisper large-v3 model with Meta's Llama2 model. It is specifically designed to transcribe spoken content from video files and then translate it, making it an invaluable resource for users in multilingual environments.
