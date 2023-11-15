@@ -7,6 +7,9 @@ import json
 import requests
 
 def generate(prompt):
+    # Ollama.ai needs to be installed and configured properly.
+    # https://ollama.ai
+
     llmmodel = 'llama2'
     try:
         r = requests.post('http://localhost:11434/api/generate',
@@ -24,12 +27,12 @@ def generate(prompt):
     for line in r.iter_lines():
         body = json.loads(line)
         response_part = body.get('response', '')
+        
         # the response streams one token at a time, print that as we receive it
         print(response_part, end='', flush=True)
 
         if 'error' in body:
             raise Exception(body['error'])
-
 
 def transcribe_video(filename):
     # Ensure you have setup the whisper model from the official repository:
@@ -37,7 +40,9 @@ def transcribe_video(filename):
     
     try:   
         # Load the Whisper model
-        modelname = "medium"
+        # Alongside large-v3, whisper has several models to choose offering speed and accuracy tradeoffs.
+        # including tiny, base and medium -> https://github.com/openai/whisper#available-models-and-languages
+        modelname = "base"
         model = whisper.load_model(modelname)
         result = model.transcribe(filename, fp16=False, language="en")
         transcription_text = result['text']
