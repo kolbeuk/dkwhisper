@@ -29,10 +29,9 @@ Output
 The script will output the transcribed text, followed by its translation. Transcription and translation are both printed to the console.
 
 Acknowledgements
+OpenAI: This project utilizes the OpenAI API for advanced AI-based image and text processing. Code snippets and guidance from OpenAI's documentation and resources have been instrumental in the development of this project.
+Meta: Acknowledgment is given to Meta for the development of the Llama2 model, which has significantly contributed to the AI capabilities of this project.
+ollama.ai: Gratitude is extended to llama.ai for enabling the local hosting of the Llama2 model, enhancing the accessibility and performance of the project.
 
-OpenAI for the Whisper model.
-
-Meta for the Llama2 model.
-
-ollama.ai for enabling local hosting of the Llama2 model.
-
+Note
+This script is intended as a demonstration and may require modifications for production use.
